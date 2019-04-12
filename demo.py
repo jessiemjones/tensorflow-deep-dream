@@ -16,7 +16,7 @@ def main():
     model_name = os.path.split(url)[-1]
     local_zip_file = os.path.join(data_dir, model_name)
     if not os.path.exists(local_zip_file):
-        #then download
+        #then download 
         model_url = urllib.request.urlopen(url)
         with open(local_zip_file, 'wb') as output:
             output.write(model_url.read())
